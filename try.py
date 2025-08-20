@@ -8,7 +8,7 @@ import numpy as np
 # ===============================
 # Load & preprocess data
 # ===============================
-FILE_PATH = r"C:\Users\srihitha m\Downloads\1Y02_Data.xlsx"
+FILE_PATH = r"1Y02_Data.xlsx"
 
 @st.cache_data
 def load_data():
@@ -99,3 +99,4 @@ input_df = pd.DataFrame([input_data])[X.columns]
 if st.button("Predict BFOUT"):
     prediction = model.predict(input_df)[0]
     st.success(f"🎯 Predicted BFOUT: {prediction:.2f}")
+
